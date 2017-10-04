@@ -1,8 +1,14 @@
 const path = require('path')
 
 const root = path.resolve(__dirname, '..')
+const srcPath = path.resolve(root, 'web')
 module.exports = {
-    entry: './web/index.js',
+    entry: {
+        main: [
+            require.resolve('./polyfills-client.js'),
+            path.resolve(srcPath, 'index.js')
+        ]
+    },
     output: {
         filename: '[name].js',
         path: path.resolve(root, 'public', 'build'),
@@ -17,7 +23,7 @@ module.exports = {
                     {
                         loader: 'babel-loader',
                         options: {
-                            presets: ['env', 'stage-2']
+                            presets: ['env', 'stage-2', 'react']
                         }
                     }
                 ]
