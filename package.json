@@ -4,9 +4,17 @@
   "description": "ทดสอบสร้าง Blog ด้วย React + GraphQL + Apolloสุดยอด",
   "main": "index.js",
   "scripts": {
-    "dev": "npm run dev-server & npm run start-csr-dev",
-    "start-csr-dev": "NODE_ENV=development node server/index.js",
+    "dev": "npm-run-all --parallel dev-server start-csr-dev",
+    "start-csr-dev": "better-npm-run start-csr-dev",
     "dev-server": "webpack-dev-server --config config/webpack.dev.js"
+  },
+  "betterScripts": {
+    "start-csr-dev": {
+      "command": "node ./server/index.js",
+      "env": {
+        "NODE_ENV": "development"
+      }
+    }
   },
   "keywords": [],
   "author": "",
