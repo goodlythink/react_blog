@@ -1,6 +1,7 @@
 const paths = require('../paths')
 
 const babelPresets = [
+    'react',
     [
         'env',
         {
@@ -13,7 +14,6 @@ const babelPresets = [
             debug: true
         }
     ],
-    'react',
     'stage-2'
 ]
 
@@ -39,6 +39,25 @@ const dev = {
     ]
 }
 
+const prod = {
+    test: /.js$/,
+    include: paths.src,
+    use: [
+        {
+            loader: 'babel-loader',
+            options: {
+                presets: babelPresets,
+                plugins: [
+                    transformRuntime,
+                    'transform-react-inline-elements',
+                    'transform-react-pure-class-to-function',
+                    'transform-react-constant-elements'
+                ]
+            }
+        }
+    ]
+}
 module.exports = {
     dev,
+    prod,
 }
