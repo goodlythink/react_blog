@@ -2,6 +2,8 @@ const path = require('path')
 const webpack = require('webpack')
 const paths = require('./paths')
 const ruleJS = require('./rules/ruleJS')
+const ruleCSS = require('./rules/ruleCSS')
+const ruleStatic = require('./rules/ruleStatic')
 
 module.exports = {
     entry: {
@@ -17,7 +19,9 @@ module.exports = {
     },
     module: {
         rules: [
-            ruleJS.dev
+            ruleJS.dev,
+            ruleCSS.global.dev,
+            ruleStatic,
         ]
     },
     plugins: [
