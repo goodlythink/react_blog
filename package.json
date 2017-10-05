@@ -6,13 +6,21 @@
   "scripts": {
     "dev": "npm-run-all --parallel dev-server start-csr-dev",
     "start-csr-dev": "better-npm-run start-csr-dev",
-    "dev-server": "webpack-dev-server --config config/webpack.dev.js"
+    "dev-server": "webpack-dev-server --config config/webpack.dev.js",
+    "build":"npm-run-all build-client",
+    "build-client" : "better-npm-run build-client"
   },
   "betterScripts": {
     "start-csr-dev": {
       "command": "node ./server/index.js",
       "env": {
         "NODE_ENV": "development"
+      }
+    },
+    "build-client" :{
+      "command": "webpack --config config/webpack.prod.js --progress",
+      "env": {
+        "NODE_ENV": "production"
       }
     }
   },
