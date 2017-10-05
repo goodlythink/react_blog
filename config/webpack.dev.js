@@ -17,6 +17,9 @@ module.exports = {
         path: path.resolve(paths.root, 'public', 'build'),
         publicPath: 'http://localhost:8001/',
     },
+    resolve: {
+        modules: [paths.src, 'node_modules']
+    },
     module: {
         rules: [
             ruleJS.dev,

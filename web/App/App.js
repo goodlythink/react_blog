@@ -1,12 +1,13 @@
 import React from 'react'
+import Header from 'Header/Header'
+import css from './App.module.scss'
 
-import Header from '../Header/Header'
 class App extends React.Component {
     render() {
         return (
-            <div className="container">
+            <div className={css.container}>
                <Header/>
-                <div className="content">
+               <div className={css.content}>
                     Content
                 </div>
             </div>
