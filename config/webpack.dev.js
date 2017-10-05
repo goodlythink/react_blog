@@ -26,13 +26,13 @@ module.exports = {
             debug: true
         }),
         new webpack.HotModuleReplacementPlugin(),
-        new webpack.NameModulesPlugin()
+        new webpack.NamedModulesPlugin(),
     ],
     devServer: {
         port: 8001,
         inline: true,
         hotOnly: true,
-        headers: { 'Access-Control-Allow-Origin': 'http://localhost/8000' },
+        headers: { 'Access-Control-Allow-Origin': 'http://localhost:8000' },
         noInfo: true,
         historyApiFallback: true,
         compress: true

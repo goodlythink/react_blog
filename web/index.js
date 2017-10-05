@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom'
 class App extends React.Component {
     render() {
         return (
-            <div>Hi React 2</div>
+            <div>Hi React With HMRE</div>
         )
     }    
 }
