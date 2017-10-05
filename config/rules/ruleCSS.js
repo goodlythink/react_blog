@@ -57,7 +57,7 @@ const cssModuleProd = {
     test: /\.module\.s?css$/,
     use: ExtractTextPlugin.extract({
         fallback: 'style-loader',
-        user:[
+        use:[
             {
                 loader: 'css-loader',
                 options: {
