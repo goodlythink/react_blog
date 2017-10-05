@@ -1,5 +1,28 @@
 body {
-    background-color: #d3d3d3;
+    background-color:#f1f1f1;
     font-family: Helventica, Arial, san-serif;
     margin: 0;
+}
+
+.container{
+    font-size: 20px;
+    background-color: #ffffff;
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.content{
+    padding: 12px
+}
+
+.pug{
+    background: #ffffff url('./App/pug-cover.jpg') no-repeat left center;
+    background-size: cover;
+    height: 200px;
+}
+
+.pugHeading{
+    color: #ffffff;
+    padding: 12px;
+    font-size: 32px;
 }
