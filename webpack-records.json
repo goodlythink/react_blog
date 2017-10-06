@@ -1,0 +1,260 @@
+{
+  "extract-text-webpack-plugin node_modules/extract-text-webpack-plugin/dist node_modules/css-loader/index.js??ref--1-2!node_modules/postcss-loader/lib/index.js??ref--1-3!node_modules/sass-loader/lib/loader.js??ref--1-4!web/index.scss": [
+    {
+      "modules": {
+        "byIdentifier": {
+          "node_modules/css-loader/lib/css-base.js": "FZ+f",
+          "node_modules/css-loader/index.js?{\"importLoaders\":2,\"localIdentName\":\"[hash:base64:8]\",\"minimize\":true}!node_modules/postcss-loader/lib/index.js?{}!node_modules/sass-loader/lib/loader.js?{\"includePaths\":[\"/Users/goodlythink/ReactProject/react_blog/web\"]}!web/index.scss": "XNAk"
+        },
+        "usedIds": {
+          "FZ+f": "FZ+f",
+          "XNAk": "XNAk"
+        }
+      },
+      "chunks": {
+        "byName": {},
+        "byBlocks": {},
+        "usedIds": {
+          "1": 1
+        }
+      }
+    }
+  ],
+  "extract-text-webpack-plugin node_modules/extract-text-webpack-plugin/dist node_modules/css-loader/index.js??ref--2-2!node_modules/postcss-loader/lib/index.js??ref--2-3!node_modules/sass-loader/lib/loader.js??ref--2-4!web/App/App.module.scss": [
+    {
+      "modules": {
+        "byIdentifier": {
+          "node_modules/css-loader/lib/css-base.js": "FZ+f",
+          "node_modules/css-loader/index.js?{\"modules\":true,\"importLoaders\":2,\"localIdentName\":\"[hash:base64:8]\",\"minimize\":true}!node_modules/postcss-loader/lib/index.js?{}!node_modules/sass-loader/lib/loader.js?{\"includePaths\":[\"/Users/goodlythink/ReactProject/react_blog/web\"]}!web/App/App.module.scss": "JUrV"
+        },
+        "usedIds": {
+          "FZ+f": "FZ+f",
+          "JUrV": "JUrV"
+        }
+      },
+      "chunks": {
+        "byName": {},
+        "byBlocks": {},
+        "usedIds": {
+          "1": 1
+        }
+      }
+    }
+  ],
+  "extract-text-webpack-plugin node_modules/extract-text-webpack-plugin/dist node_modules/css-loader/index.js??ref--2-2!node_modules/postcss-loader/lib/index.js??ref--2-3!node_modules/sass-loader/lib/loader.js??ref--2-4!web/Header/Header.module.scss": [
+    {
+      "modules": {
+        "byIdentifier": {
+          "node_modules/css-loader/lib/css-base.js": "FZ+f",
+          "node_modules/url-loader/index.js??ref--3!web/Header/pug-cover.jpg": "fVUg",
+          "node_modules/css-loader/index.js?{\"modules\":true,\"importLoaders\":2,\"localIdentName\":\"[hash:base64:8]\",\"minimize\":true}!node_modules/postcss-loader/lib/index.js?{}!node_modules/sass-loader/lib/loader.js?{\"includePaths\":[\"/Users/goodlythink/ReactProject/react_blog/web\"]}!web/Header/Header.module.scss": "r1We"
+        },
+        "usedIds": {
+          "FZ+f": "FZ+f",
+          "fVUg": "fVUg",
+          "r1We": "r1We"
+        }
+      },
+      "chunks": {
+        "byName": {},
+        "byBlocks": {},
+        "usedIds": {
+          "1": 1
+        }
+      }
+    }
+  ],
+  "modules": {
+    "byIdentifier": {
+      "node_modules/core-js/library/modules/_descriptors.js": "+E39",
+      "node_modules/core-js/library/modules/_ctx.js": "+ZMJ",
+      "node_modules/react-dom/cjs/react-dom.production.min.js": "/OLF",
+      "node_modules/core-js/library/modules/_meta.js": "06OY",
+      "node_modules/babel-runtime/core-js/symbol/for.js": "0s0N",
+      "node_modules/core-js/library/modules/_object-gops.js": "1kS7",
+      "node_modules/fbjs/lib/containsNode.js": "2B9T",
+      "node_modules/asap/browser-raw.js": "3Cgm",
+      "node_modules/core-js/library/modules/_uid.js": "3Eo+",
+      "node_modules/core-js/library/modules/_defined.js": "52gC",
+      "node_modules/core-js/library/fn/symbol/for.js": "54n4",
+      "node_modules/babel-runtime/core-js/symbol.js": "5QVw",
+      "node_modules/core-js/library/modules/_an-object.js": "77Pl",
+      "node_modules/core-js/library/modules/_global.js": "7KvD",
+      "node_modules/core-js/library/modules/_is-array.js": "7UMu",
+      "node_modules/core-js/library/modules/_redefine.js": "880/",
+      "node_modules/fbjs/lib/getActiveElement.js": "9U7y",
+      "node_modules/object-assign/index.js": "BEQ0",
+      "node_modules/core-js/library/fn/symbol/index.js": "BwfY",
+      "node_modules/core-js/library/modules/_has.js": "D2L2",
+      "node_modules/webpack/buildin/global.js": "DuR2",
+      "node_modules/extract-text-webpack-plugin/dist/loader.js??ref--2-0!node_modules/style-loader/index.js!node_modules/css-loader/index.js??ref--2-2!node_modules/postcss-loader/lib/index.js??ref--2-3!node_modules/sass-loader/lib/loader.js??ref--2-4!web/App/App.module.scss": "EOxJ",
+      "node_modules/core-js/library/modules/_is-object.js": "EqjI",
+      "node_modules/core-js/library/modules/_core.js": "FeBl",
+      "node_modules/react/index.js": "GiK3",
+      "node_modules/babel-loader/lib/index.js??ref--0-0!web/Header/Header.js": "I9x9",
+      "node_modules/core-js/library/modules/_object-keys-internal.js": "Ibhu",
+      "node_modules/fbjs/lib/focusNode.js": "JTgD",
+      "node_modules/core-js/library/modules/_wks-ext.js": "Kh4W",
+      "node_modules/core-js/library/modules/_object-gopd.js": "LKZe",
+      "node_modules/core-js/library/modules/es6.object.to-string.js": "M6a0",
+      "node_modules/core-js/library/modules/_iobject.js": "MU5D",
+      "node_modules/core-js/library/modules/_to-primitive.js": "MmMw",
+      "node_modules/core-js/library/modules/_object-pie.js": "NpIQ",
+      "node_modules/promise/lib/es6-extensions.js": "Nq5S",
+      "node_modules/react-dom/index.js": "O27J",
+      "node_modules/core-js/library/modules/_library.js": "O4g8",
+      "node_modules/core-js/library/modules/_dom-create.js": "ON07",
+      "node_modules/core-js/library/modules/es7.symbol.async-iterator.js": "OYls",
+      "node_modules/core-js/library/modules/_to-length.js": "QRG4",
+      "node_modules/core-js/library/modules/es7.symbol.observable.js": "QWe/",
+      "node_modules/core-js/library/modules/_cof.js": "R9M2",
+      "node_modules/core-js/library/modules/_html.js": "RPLV",
+      "node_modules/core-js/library/modules/_object-gopn-ext.js": "Rrel",
+      "node_modules/core-js/library/modules/_fails.js": "S82l",
+      "node_modules/core-js/library/modules/_ie8-dom-define.js": "SfB7",
+      "node_modules/fbjs/lib/emptyObject.js": "TJez",
+      "node_modules/extract-text-webpack-plugin/dist/loader.js??ref--1-0!node_modules/style-loader/index.js!node_modules/css-loader/index.js??ref--1-2!node_modules/postcss-loader/lib/index.js??ref--1-3!node_modules/sass-loader/lib/loader.js??ref--1-4!web/index.scss": "TYxY",
+      "node_modules/core-js/library/modules/_to-iobject.js": "TcQ7",
+      "node_modules/core-js/library/modules/_to-integer.js": "UuGF",
+      "node_modules/babel-loader/lib/index.js??ref--0-0!web/App/App.js": "VS33",
+      "config/polyfills-client.js": "VVcj",
+      "node_modules/core-js/library/modules/_property-desc.js": "X8DO",
+      "node_modules/core-js/library/modules/_enum-keys.js": "Xc4G",
+      "node_modules/extract-text-webpack-plugin/dist/loader.js??ref--2-0!node_modules/style-loader/index.js!node_modules/css-loader/index.js??ref--2-2!node_modules/postcss-loader/lib/index.js??ref--2-3!node_modules/sass-loader/lib/loader.js??ref--2-4!web/Header/Header.module.scss": "YbOP",
+      "node_modules/core-js/library/modules/_object-create.js": "Yobk",
+      "node_modules/core-js/library/modules/_shared-key.js": "ax3d",
+      "node_modules/promise/lib/rejection-tracking.js": "bJHr",
+      "node_modules/core-js/library/modules/_wks-define.js": "crlp",
+      "node_modules/fbjs/lib/invariant.js": "cxPT",
+      "node_modules/fbjs/lib/ExecutionEnvironment.js": "czSA",
+      "node_modules/core-js/library/modules/_wks.js": "dSzd",
+      "node_modules/babel-runtime/helpers/jsx.js": "dcb+",
+      "node_modules/fbjs/lib/emptyFunction.js": "e6+Q",
+      "node_modules/core-js/library/modules/_set-to-string-tag.js": "e6n0",
+      "node_modules/core-js/library/modules/_shared.js": "e8AB",
+      "node_modules/core-js/library/modules/_object-dp.js": "evD5",
+      "node_modules/fbjs/lib/isNode.js": "f2RQ",
+      "node_modules/core-js/library/modules/es6.symbol.js": "fWfb",
+      "node_modules/core-js/library/modules/_to-absolute-index.js": "fkB2",
+      "node_modules/core-js/library/modules/_hide.js": "hJx8",
+      "node_modules/isomorphic-fetch/fetch-npm-browserify.js": "j9g7",
+      "node_modules/core-js/library/modules/_export.js": "kM2E",
+      "multi config/polyfills-client.js react react-dom": 0,
+      "node_modules/core-js/library/modules/_a-function.js": "lOnJ",
+      "node_modules/core-js/library/modules/_object-keys.js": "lktj",
+      "node_modules/core-js/library/modules/_object-gopn.js": "n0T6",
+      "node_modules/fbjs/lib/EventListener.js": "o+pC",
+      "node_modules/core-js/library/modules/_object-dps.js": "qio6",
+      "node_modules/whatwg-fetch/fetch.js": "rplX",
+      "node_modules/babel-loader/lib/index.js??ref--0-0!web/index.js": "s4tq",
+      "node_modules/promise/lib/core.js": "se3Y",
+      "node_modules/fbjs/lib/shallowEqual.js": "sgb3",
+      "node_modules/fbjs/lib/isTextNode.js": "uO0E",
+      "node_modules/core-js/library/modules/_array-includes.js": "vFc/",
+      "node_modules/react/cjs/react.production.min.js": "vttU",
+      "node_modules/core-js/library/modules/_enum-bug-keys.js": "xnc9"
+    },
+    "usedIds": {
+      "0": 0,
+      "+E39": "+E39",
+      "+ZMJ": "+ZMJ",
+      "/OLF": "/OLF",
+      "06OY": "06OY",
+      "0s0N": "0s0N",
+      "1kS7": "1kS7",
+      "2B9T": "2B9T",
+      "3Cgm": "3Cgm",
+      "3Eo+": "3Eo+",
+      "52gC": "52gC",
+      "54n4": "54n4",
+      "5QVw": "5QVw",
+      "77Pl": "77Pl",
+      "7KvD": "7KvD",
+      "7UMu": "7UMu",
+      "880/": "880/",
+      "9U7y": "9U7y",
+      "BEQ0": "BEQ0",
+      "BwfY": "BwfY",
+      "D2L2": "D2L2",
+      "DuR2": "DuR2",
+      "EOxJ": "EOxJ",
+      "EqjI": "EqjI",
+      "FeBl": "FeBl",
+      "GiK3": "GiK3",
+      "I9x9": "I9x9",
+      "Ibhu": "Ibhu",
+      "JTgD": "JTgD",
+      "Kh4W": "Kh4W",
+      "LKZe": "LKZe",
+      "M6a0": "M6a0",
+      "MU5D": "MU5D",
+      "MmMw": "MmMw",
+      "NpIQ": "NpIQ",
+      "Nq5S": "Nq5S",
+      "O27J": "O27J",
+      "O4g8": "O4g8",
+      "ON07": "ON07",
+      "OYls": "OYls",
+      "QRG4": "QRG4",
+      "QWe/": "QWe/",
+      "R9M2": "R9M2",
+      "RPLV": "RPLV",
+      "Rrel": "Rrel",
+      "S82l": "S82l",
+      "SfB7": "SfB7",
+      "TJez": "TJez",
+      "TYxY": "TYxY",
+      "TcQ7": "TcQ7",
+      "UuGF": "UuGF",
+      "VS33": "VS33",
+      "VVcj": "VVcj",
+      "X8DO": "X8DO",
+      "Xc4G": "Xc4G",
+      "YbOP": "YbOP",
+      "Yobk": "Yobk",
+      "ax3d": "ax3d",
+      "bJHr": "bJHr",
+      "crlp": "crlp",
+      "cxPT": "cxPT",
+      "czSA": "czSA",
+      "dSzd": "dSzd",
+      "dcb+": "dcb+",
+      "e6+Q": "e6+Q",
+      "e6n0": "e6n0",
+      "e8AB": "e8AB",
+      "evD5": "evD5",
+      "f2RQ": "f2RQ",
+      "fWfb": "fWfb",
+      "fkB2": "fkB2",
+      "hJx8": "hJx8",
+      "j9g7": "j9g7",
+      "kM2E": "kM2E",
+      "lOnJ": "lOnJ",
+      "lktj": "lktj",
+      "n0T6": "n0T6",
+      "o+pC": "o+pC",
+      "qio6": "qio6",
+      "rplX": "rplX",
+      "s4tq": "s4tq",
+      "se3Y": "se3Y",
+      "sgb3": "sgb3",
+      "uO0E": "uO0E",
+      "vFc/": "vFc/",
+      "vttU": "vttU",
+      "xnc9": "xnc9"
+    }
+  },
+  "chunks": {
+    "byName": {
+      "main": 0,
+      "vendor": 1,
+      "manifest": 2
+    },
+    "byBlocks": {},
+    "usedIds": {
+      "0": 0,
+      "1": 1,
+      "2": 2
+    }
+  }
+}

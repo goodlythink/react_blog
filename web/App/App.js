@@ -8,7 +8,7 @@ class App extends React.Component {
             <div className={css.container}>
                <Header/>
                <div className={css.content}>
-                    Content
+                    Content 2
                 </div>
             </div>
         )
