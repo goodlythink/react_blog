@@ -1,10 +1,5 @@
-const fs = require('fs')
-const path = require('path')
-const paths = require('../config/paths')
+const isProd = process.env.NODE_ENV === 'production'
 
-const filepath = path.resolve(paths.public, 'csr.dev.html')
-const markup = fs.readFileSync(filepath, 'utf-8')
+const renderer = isProd ? require('./csr.prod') : require('./csr.dev')
 
-module.exports = (req, res) => {
-    res.send(markup)
-}
+module.exports = renderer

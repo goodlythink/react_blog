@@ -10,13 +10,20 @@
     "clean": "rimraf ./public/build",
     "prebuild": "npm run clean",
     "build": "npm-run-all build-client",
-    "build-client": "better-npm-run build-client"
+    "build-client": "better-npm-run build-client",
+    "start": "better-npm-run start-csr-prod"
   },
   "betterScripts": {
     "start-csr-dev": {
       "command": "node ./server/index.js",
       "env": {
         "NODE_ENV": "development"
+      }
+    },
+    "start-csr-prod": {
+      "command": "node ./server/index.js",
+      "env": {
+        "NODE_ENV": "production"
       }
     },
     "build-client": {
@@ -40,6 +47,7 @@
     "serve-favicon": "^2.4.5"
   },
   "devDependencies": {
+    "assets-webpack-plugin": "^3.5.1",
     "autoprefixer": "^7.1.4",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",

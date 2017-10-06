@@ -1,0 +1,9 @@
+{
+  "main": {
+    "js": "/build/js/main.js",
+    "css": "/build/css/main.07547eb92473f144706fedf83d36b1f4.css"
+  },
+  "vendor": {
+    "js": "/build/js/vendor.js"
+  }
+}
