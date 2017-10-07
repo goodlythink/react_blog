@@ -52,12 +52,32 @@ const globalDev = {
     ],
 }
 
+// any.scss (server)
+const globalServer = {
+    test: /^((?!\.module\.).)*\.s?css$/,
+    use: [
+        'css-loader/locals',
+        {
+            loader: 'postcss-loader',
+            options: {
+                plugins: loader => [require('autoprefixer')()]
+            }
+        },
+        {
+            loader: 'sass-loader',
+            options: {
+                includePaths: [paths.src]
+            }
+        }
+    ],
+}
+
 // any .module.scss (production)
 const cssModuleProd = {
     test: /\.module\.s?css$/,
     use: ExtractTextPlugin.extract({
         fallback: 'style-loader',
-        use:[
+        use: [
             {
                 loader: 'css-loader',
                 options: {
@@ -110,13 +130,43 @@ const cssModuleDev = {
         }
     ],
 }
+
+// any .module.scss (Server)
+const cssModuleServer = {
+    test: /\.module\.s?css$/,
+    use: [
+        {
+            loader: 'css-loader/locals',
+            options: {
+                modules: true,
+                importLoaders: 2,
+                localIdentName: '[hash:base64:8]'
+            }
+        },
+        {
+            loader: 'postcss-loader',
+            options: {
+                plugins: loader => [require('autoprefixer')()]
+            }
+        },
+        {
+            loader: 'sass-loader',
+            options: {
+                includePaths: [paths.src]
+            }
+        }
+    ],
+}
+
 module.exports = {
     global: {
         dev: globalDev,
         prod: globalProd,
+        server: globalServer,
     },
     cssModule: {
         dev: cssModuleDev,
         prod: cssModuleProd,
+        server: cssModuleServer,
     }
 }

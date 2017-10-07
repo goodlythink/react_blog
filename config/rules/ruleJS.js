@@ -57,7 +57,39 @@ const prod = {
         }
     ]
 }
+
+const server = {
+    test: /.js$/,
+    exclude: /node_modules/,
+    use: [
+        {
+            loader: 'babel-loader',
+            options: {
+                presets: [
+                    'react',
+                    [
+                        'env',
+                        {
+                            targets: {
+                                node: 'current',
+                            },
+                            modules: false,
+                            useBuiltIns: false,
+                            loose: true,
+                            debug: true,
+                        }
+                    ],
+                    'stage-2'
+                ],
+                plugins: [
+                    transformRuntime,
+                ]
+            }
+        }
+    ]
+}
 module.exports = {
     dev,
     prod,
+    server
 }

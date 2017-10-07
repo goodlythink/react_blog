@@ -15,7 +15,7 @@
         "byName": {},
         "byBlocks": {},
         "usedIds": {
-          "1": 1
+          "0": 0
         }
       }
     }
@@ -36,7 +36,7 @@
         "byName": {},
         "byBlocks": {},
         "usedIds": {
-          "1": 1
+          "0": 0
         }
       }
     }
@@ -47,19 +47,21 @@
         "byIdentifier": {
           "node_modules/css-loader/lib/css-base.js": "FZ+f",
           "node_modules/url-loader/index.js??ref--3!web/Header/pug-cover.jpg": "fVUg",
-          "node_modules/css-loader/index.js?{\"modules\":true,\"importLoaders\":2,\"localIdentName\":\"[hash:base64:8]\",\"minimize\":true}!node_modules/postcss-loader/lib/index.js?{}!node_modules/sass-loader/lib/loader.js?{\"includePaths\":[\"/Users/goodlythink/ReactProject/react_blog/web\"]}!web/Header/Header.module.scss": "r1We"
+          "node_modules/css-loader/index.js?{\"modules\":true,\"importLoaders\":2,\"localIdentName\":\"[hash:base64:8]\",\"minimize\":true}!node_modules/postcss-loader/lib/index.js?{}!node_modules/sass-loader/lib/loader.js?{\"includePaths\":[\"/Users/goodlythink/ReactProject/react_blog/web\"]}!web/Header/Header.module.scss": "r1We",
+          "node_modules/css-loader/index.js?{\"modules\":true,\"importLoaders\":2,\"localIdentName\":\"[hash:base64:8]\",\"minimize\":true}!node_modules/postcss-loader/lib/index.js?{\"plugins\":[null]}!node_modules/sass-loader/lib/loader.js?{\"includePaths\":[\"/Users/goodlythink/ReactProject/react_blog/web\"]}!web/Header/Header.module.scss": "v4JX"
         },
         "usedIds": {
           "FZ+f": "FZ+f",
           "fVUg": "fVUg",
-          "r1We": "r1We"
+          "r1We": "r1We",
+          "v4JX": "v4JX"
         }
       },
       "chunks": {
         "byName": {},
         "byBlocks": {},
         "usedIds": {
-          "1": 1
+          "0": 0
         }
       }
     }
@@ -152,7 +154,70 @@
       "node_modules/fbjs/lib/isTextNode.js": "uO0E",
       "node_modules/core-js/library/modules/_array-includes.js": "vFc/",
       "node_modules/react/cjs/react.production.min.js": "vttU",
-      "node_modules/core-js/library/modules/_enum-bug-keys.js": "xnc9"
+      "node_modules/core-js/library/modules/_enum-bug-keys.js": "xnc9",
+      "node_modules/react-router/es/Redirect.js": "1S3F",
+      "node_modules/react-router/es/RouterUtils.js": "23h0",
+      "node_modules/history/lib/createMemoryHistory.js": "2uXV",
+      "node_modules/history/lib/PathUtils.js": "3ywA",
+      "node_modules/history/lib/DOMUtils.js": "5Dzx",
+      "node_modules/babel-loader/lib/index.js??ref--0-0!web/Home/Home.js": "5X7K",
+      "node_modules/history/lib/BrowserProtocol.js": "65/q",
+      "node_modules/react-router/es/browserHistory.js": "79A3",
+      "node_modules/history/lib/AsyncUtils.js": "9S0I",
+      "node_modules/react-router/es/Link.js": "ABxT",
+      "node_modules/react-router/es/matchRoutes.js": "B7i9",
+      "node_modules/react-router/es/IndexLink.js": "BBPh",
+      "node_modules/react-router/es/index.js": "CIox",
+      "node_modules/create-react-class/index.js": "DT0+",
+      "node_modules/warning/browser.js": "GvBW",
+      "node_modules/history/lib/Actions.js": "HNwS",
+      "node_modules/react-router/es/getComponents.js": "JYO/",
+      "node_modules/history/lib/runTransitionHook.js": "JswB",
+      "node_modules/prop-types/index.js": "KSGD",
+      "node_modules/react-router/es/match.js": "N5Mq",
+      "node_modules/react-router/es/RouteUtils.js": "NycN",
+      "node_modules/query-string/index.js": "OAwv",
+      "node_modules/react-router/es/hashHistory.js": "OhKW",
+      "node_modules/history/lib/DOMStateStorage.js": "P6av",
+      "node_modules/prop-types/factoryWithThrowingShims.js": "Q4WQ",
+      "node_modules/history/lib/createBrowserHistory.js": "Q69v",
+      "node_modules/react-router/es/computeChangedRoutes.js": "RVWm",
+      "node_modules/react-router/es/createTransitionManager.js": "TWV5",
+      "node_modules/react-router/es/PatternUtils.js": "UYe+",
+      "node_modules/react-router/es/useRouterHistory.js": "UvA0",
+      "node_modules/history/lib/ExecutionEnvironment.js": "W8wb",
+      "node_modules/react-router/es/PropTypes.js": "afjn",
+      "node_modules/react-router/es/ContextUtils.js": "auDf",
+      "node_modules/history/lib/LocationUtils.js": "bMGQ",
+      "node_modules/invariant/browser.js": "crWv",
+      "node_modules/react-router/es/IndexRedirect.js": "dC3n",
+      "node_modules/react-router/es/isActive.js": "eNQj",
+      "node_modules/react-router/es/applyRouterMiddleware.js": "fJzy",
+      "node_modules/react-router/es/getRouteParams.js": "gnG3",
+      "node_modules/prop-types/lib/ReactPropTypesSecret.js": "gt/O",
+      "node_modules/hoist-non-react-statics/index.js": "hYij",
+      "node_modules/react-router/es/TransitionUtils.js": "iHu5",
+      "node_modules/react-router/es/PromiseUtils.js": "l5hK",
+      "node_modules/history/lib/createHistory.js": "lvIk",
+      "node_modules/react-router/es/routerWarning.js": "oMLH",
+      "node_modules/react-router/es/RouterContext.js": "r6Es",
+      "node_modules/strict-uri-encode/index.js": "rprB",
+      "node_modules/react-router/es/IndexRoute.js": "s+O2",
+      "node_modules/react-router/es/Route.js": "s4hp",
+      "node_modules/babel-loader/lib/index.js??ref--0-0!web/routes.js": "tUxE",
+      "node_modules/react-router/es/Router.js": "twkG",
+      "node_modules/history/lib/useBasename.js": "v82M",
+      "node_modules/react-router/es/createRouterHistory.js": "vAwi",
+      "node_modules/react-router/es/withRouter.js": "vC7t",
+      "node_modules/react-router/es/createMemoryHistory.js": "w6N+",
+      "node_modules/history/lib/HashProtocol.js": "wAIp",
+      "node_modules/history/lib/createHashHistory.js": "wKL/",
+      "node_modules/babel-loader/lib/index.js??ref--0-0!web/About/About.js": "wVNj",
+      "node_modules/react-router/es/InternalPropTypes.js": "wXat",
+      "node_modules/create-react-class/factory.js": "wqO5",
+      "node_modules/history/lib/useQueries.js": "wrf5",
+      "node_modules/history/lib/RefreshProtocol.js": "yEry",
+      "node_modules/react-router/es/AsyncUtils.js": "yN4y"
     },
     "usedIds": {
       "0": 0,
@@ -241,7 +306,70 @@
       "uO0E": "uO0E",
       "vFc/": "vFc/",
       "vttU": "vttU",
-      "xnc9": "xnc9"
+      "xnc9": "xnc9",
+      "1S3F": "1S3F",
+      "23h0": "23h0",
+      "2uXV": "2uXV",
+      "3ywA": "3ywA",
+      "5Dzx": "5Dzx",
+      "5X7K": "5X7K",
+      "65/q": "65/q",
+      "79A3": "79A3",
+      "9S0I": "9S0I",
+      "ABxT": "ABxT",
+      "B7i9": "B7i9",
+      "BBPh": "BBPh",
+      "CIox": "CIox",
+      "DT0+": "DT0+",
+      "GvBW": "GvBW",
+      "HNwS": "HNwS",
+      "JYO/": "JYO/",
+      "JswB": "JswB",
+      "KSGD": "KSGD",
+      "N5Mq": "N5Mq",
+      "NycN": "NycN",
+      "OAwv": "OAwv",
+      "OhKW": "OhKW",
+      "P6av": "P6av",
+      "Q4WQ": "Q4WQ",
+      "Q69v": "Q69v",
+      "RVWm": "RVWm",
+      "TWV5": "TWV5",
+      "UYe+": "UYe+",
+      "UvA0": "UvA0",
+      "W8wb": "W8wb",
+      "afjn": "afjn",
+      "auDf": "auDf",
+      "bMGQ": "bMGQ",
+      "crWv": "crWv",
+      "dC3n": "dC3n",
+      "eNQj": "eNQj",
+      "fJzy": "fJzy",
+      "gnG3": "gnG3",
+      "gt/O": "gt/O",
+      "hYij": "hYij",
+      "iHu5": "iHu5",
+      "l5hK": "l5hK",
+      "lvIk": "lvIk",
+      "oMLH": "oMLH",
+      "r6Es": "r6Es",
+      "rprB": "rprB",
+      "s+O2": "s+O2",
+      "s4hp": "s4hp",
+      "tUxE": "tUxE",
+      "twkG": "twkG",
+      "v82M": "v82M",
+      "vAwi": "vAwi",
+      "vC7t": "vC7t",
+      "w6N+": "w6N+",
+      "wAIp": "wAIp",
+      "wKL/": "wKL/",
+      "wVNj": "wVNj",
+      "wXat": "wXat",
+      "wqO5": "wqO5",
+      "wrf5": "wrf5",
+      "yEry": "yEry",
+      "yN4y": "yN4y"
     }
   },
   "chunks": {
