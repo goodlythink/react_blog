@@ -13,7 +13,7 @@ module.exports = {
         main: [
             require.resolve('./polyfills-server.js'),
             path.resolve(paths.root, 'server', 'matchRoute.js')
-        ]
+        ],
     },
     output: {
         filename: 'js/matchRoute.js',

@@ -263,7 +263,7 @@ function matchRoute(req) {
                     }
                 });
             } else if (renderProps) {
-                const element = __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_react_router__["RouteContext"], renderProps);
+                const element = __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_react_router__["RouterContext"], renderProps);
                 const content = __WEBPACK_IMPORTED_MODULE_1_react_dom_server___default.a.renderToString(element);
                 resolve({ content });
             } else {
