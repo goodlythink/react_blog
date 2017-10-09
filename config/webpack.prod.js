@@ -10,10 +10,11 @@ const vendors = require('./vendors')
 module.exports = {
     entry: {
         main: path.resolve(paths.src, 'index.js'),
-        vendor:[require.resolve('./polyfills-client.js')].concat(vendors)
+        vendor: [require.resolve('./polyfills-client.js')].concat(vendors)
     },
     output: {
         filename: 'js/[name].[chunkhash].js',
+        chunkFilename: 'js/[name].[chunkhash].chunk.js',
         path: paths.build,
         publicPath: '/build/',
     },
@@ -45,6 +46,11 @@ module.exports = {
             name: ['vendor', 'manifest'],
             minChunks: Infinity
         }),
+        new webpack.optimize.CommonsChunkPlugin({
+            children: true,
+            async: true,
+            minChunks: 4
+        }),
         new ExtractTextPlugin({
             filename: 'css/[name].[contenthash].css',
             allChunks: true,
@@ -52,7 +58,7 @@ module.exports = {
         new webpack.SourceMapDevToolPlugin({
             test: /.js$/,
             filename: '[file].map',
-            exclude:[/vendor/, /manifest/]
+            exclude: [/vendor/, /manifest/]
         }),
         new webpack.LoaderOptionsPlugin({
             minimize: false,
