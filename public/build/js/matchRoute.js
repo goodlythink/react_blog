@@ -148,7 +148,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 class Home extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
     componentDidMount() {
-        this.props.dispatch(Object(__WEBPACK_IMPORTED_MODULE_3__actions__["a" /* loadPosts */])());
+        this.props.dispatch(Object(__WEBPACK_IMPORTED_MODULE_3__actions__["b" /* loadPosts */])());
     }
     render() {
         const { posts } = this.props;
@@ -374,50 +374,66 @@ class App extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__("Jmof");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom_server__ = __webpack_require__("jAJp");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom_server___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react_dom_server__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react_router__ = __webpack_require__("rxpj");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react_router___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_react_router__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__web_routes__ = __webpack_require__("tUxE");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_react_redux__ = __webpack_require__("H/qB");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_react_redux___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_react_redux__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__web_configureStore__ = __webpack_require__("Zo1f");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_asyncToGenerator__ = __webpack_require__("ZrOi");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_asyncToGenerator___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_asyncToGenerator__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react__ = __webpack_require__("Jmof");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react_dom_server__ = __webpack_require__("jAJp");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react_dom_server___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_react_dom_server__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_react_router__ = __webpack_require__("rxpj");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_react_router___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_react_router__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__web_routes__ = __webpack_require__("tUxE");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_react_redux__ = __webpack_require__("H/qB");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_react_redux___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_react_redux__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__web_configureStore__ = __webpack_require__("Zo1f");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__web_actions__ = __webpack_require__("nSrI");
 
 
+let matchRoute = (() => {
+    var _ref = __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_asyncToGenerator___default()(function* (req) {
+        const store = Object(__WEBPACK_IMPORTED_MODULE_6__web_configureStore__["a" /* default */])();
+        yield store.dispatch(Object(__WEBPACK_IMPORTED_MODULE_7__web_actions__["a" /* fetchPosts */])());
 
-
-
-
-
-function matchRoute(req) {
-    const store = Object(__WEBPACK_IMPORTED_MODULE_5__web_configureStore__["a" /* default */])();
-
-    return new Promise((resolve, reject) => {
-        Object(__WEBPACK_IMPORTED_MODULE_2_react_router__["match"])({ routes: __WEBPACK_IMPORTED_MODULE_3__web_routes__["a" /* default */], location: req.url }, (error, redirectLocation, renderProps) => {
-            if (error) {
-                resolve({ error });
-            } else if (redirectLocation) {
-                resolve({
-                    redirect: {
-                        url: redirectLocation.pathname + redirectLocation.search
-                    }
-                });
-            } else if (renderProps) {
-                const element = __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    __WEBPACK_IMPORTED_MODULE_4_react_redux__["Provider"],
-                    { store: store },
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_react_router__["RouterContext"], renderProps)
-                );
-                const content = __WEBPACK_IMPORTED_MODULE_1_react_dom_server___default.a.renderToString(element);
-                resolve({ content });
-            } else {
-                cosole.warn('error SSR');
-            }
+        return new Promise(function (resolve, reject) {
+            Object(__WEBPACK_IMPORTED_MODULE_3_react_router__["match"])({ routes: __WEBPACK_IMPORTED_MODULE_4__web_routes__["a" /* default */], location: req.url }, function (error, redirectLocation, renderProps) {
+                if (error) {
+                    resolve({ error });
+                } else if (redirectLocation) {
+                    resolve({
+                        redirect: {
+                            url: redirectLocation.pathname + redirectLocation.search
+                        }
+                    });
+                } else if (renderProps) {
+                    const element = __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(
+                        __WEBPACK_IMPORTED_MODULE_5_react_redux__["Provider"],
+                        { store: store },
+                        __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3_react_router__["RouterContext"], renderProps)
+                    );
+                    const content = __WEBPACK_IMPORTED_MODULE_2_react_dom_server___default.a.renderToString(element);
+                    resolve({
+                        content,
+                        data: store.getState()
+                    });
+                } else {
+                    cosole.warn('error SSR');
+                }
+            });
         });
     });
-}
+
+    return function matchRoute(_x) {
+        return _ref.apply(this, arguments);
+    };
+})();
+
+
+
+
+
+
+
+
 
 /* harmony default export */ __webpack_exports__["default"] = (matchRoute);
 
@@ -452,10 +468,17 @@ module.exports = {
 
 const composeEnhancers = typeof window !== 'undefined' && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || __WEBPACK_IMPORTED_MODULE_0_redux__["compose"];
 
-function configureStore() {
-    const store = Object(__WEBPACK_IMPORTED_MODULE_0_redux__["createStore"])(__WEBPACK_IMPORTED_MODULE_2__reducers_js__["a" /* default */], composeEnhancers(Object(__WEBPACK_IMPORTED_MODULE_0_redux__["applyMiddleware"])(__WEBPACK_IMPORTED_MODULE_3_redux_thunk___default.a, __WEBPACK_IMPORTED_MODULE_1_redux_promise_middleware___default()())));
+function configureStore({ preloadState } = {}) {
+    const store = Object(__WEBPACK_IMPORTED_MODULE_0_redux__["createStore"])(__WEBPACK_IMPORTED_MODULE_2__reducers_js__["a" /* default */], preloadState, composeEnhancers(Object(__WEBPACK_IMPORTED_MODULE_0_redux__["applyMiddleware"])(__WEBPACK_IMPORTED_MODULE_3_redux_thunk___default.a, __WEBPACK_IMPORTED_MODULE_1_redux_promise_middleware___default()())));
     return store;
 }
+
+/***/ }),
+
+/***/ "ZrOi":
+/***/ (function(module, exports) {
+
+module.exports = require("babel-runtime/helpers/asyncToGenerator");
 
 /***/ }),
 
@@ -484,7 +507,8 @@ module.exports = require("react-dom/server");
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (immutable) */ __webpack_exports__["a"] = loadPosts;
+/* harmony export (immutable) */ __webpack_exports__["b"] = loadPosts;
+/* harmony export (immutable) */ __webpack_exports__["a"] = fetchPosts;
 function loadPosts() {
     return (dispatch, getState) => {
         const { posts } = getState();

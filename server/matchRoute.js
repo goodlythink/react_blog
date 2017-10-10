@@ -29,7 +29,10 @@ async function matchRoute(req) {
                         </Provider>    
                     )
                     const content = ReactDOMServer.renderToString(element)
-                    resolve({ content })
+                    resolve({
+                        content,
+                        data: store.getState()
+                    })
                 } else {
                     cosole.warn('error SSR')
                 }
