@@ -24,6 +24,11 @@ function selector(state) {
     }
 }
 
-export default connect(
+const Connected = connect(
     selector,
 )(Home)
+
+Connected.fetchData = (store) => {
+    return store.dispatch(loadPosts())
+}
+export default Connected
