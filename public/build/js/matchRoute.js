@@ -84,6 +84,13 @@ module.exports = __webpack_require__("Vejm");
 
 /***/ }),
 
+/***/ "28Ef":
+/***/ (function(module, exports) {
+
+module.exports = require("redux-promise-middleware");
+
+/***/ }),
+
 /***/ "5CwF":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -130,24 +137,21 @@ module.exports = require("isomorphic-fetch");
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__("Jmof");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Posts_PostList__ = __webpack_require__("AT6d");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_redux__ = __webpack_require__("H/qB");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_redux___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react_redux__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Posts_PostList__ = __webpack_require__("AT6d");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__actions__ = __webpack_require__("nSrI");
+
+
 
 
 
 class Home extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
-    constructor(...args) {
-        var _temp;
-
-        return _temp = super(...args), this.state = { data: null, isLoading: false }, _temp;
-    }
-
     componentDidMount() {
-        this.setState({ isLoading: true });
-        fetch('http://jsonplaceholder.typicode.com/posts?userId=1').then(d => d.json()).then(d => this.setState({ data: d, isLoading: false }));
+        this.props.dispatch(Object(__WEBPACK_IMPORTED_MODULE_3__actions__["a" /* loadPosts */])());
     }
     render() {
-        const { isLoading, data } = this.state;
-
+        const { posts } = this.props;
         return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
             'div',
             null,
@@ -156,17 +160,18 @@ class Home extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
                 null,
                 'Lastest Posts'
             ),
-            isLoading && __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                'div',
-                null,
-                'Loading...'
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1__Posts_PostList__["a" /* default */], { data: data })
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__Posts_PostList__["a" /* default */], { data: posts.data })
         );
     }
 }
 
-/* harmony default export */ __webpack_exports__["default"] = (Home);
+function selector(state) {
+    return {
+        posts: state.posts
+    };
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (Object(__WEBPACK_IMPORTED_MODULE_1_react_redux__["connect"])(selector)(Home));
 
 /***/ }),
 
@@ -250,6 +255,13 @@ module.exports = require("react");
 
 /***/ }),
 
+/***/ "SHgP":
+/***/ (function(module, exports) {
+
+module.exports = require("redux-thunk");
+
+/***/ }),
+
 /***/ "UdY5":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -269,8 +281,31 @@ function counter(state = 0, action) {
     }
 }
 
+function posts(state = {}, action) {
+    switch (action.type) {
+        case 'LOAD_POSTS_PENDING':
+            return {
+                isRejected: false,
+                data: null
+            };
+        case 'LOAD_POSTS_FULFILLED':
+            return {
+                isRejected: false,
+                data: action.payload
+            };
+        case 'LOAD_POSTS_REJECT':
+            return {
+                isRejected: true,
+                data: 'There is Error'
+            };
+        default:
+            return state;
+    }
+}
+
 const reducers = Object(__WEBPACK_IMPORTED_MODULE_0_redux__["combineReducers"])({
-    counter
+    counter,
+    posts
 });
 
 /* harmony default export */ __webpack_exports__["a"] = (reducers);
@@ -405,12 +440,20 @@ module.exports = {
 /* harmony export (immutable) */ __webpack_exports__["a"] = configureStore;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_redux__ = __webpack_require__("dJD+");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_redux___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_redux__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__reducers_js__ = __webpack_require__("UdY5");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_redux_promise_middleware__ = __webpack_require__("28Ef");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_redux_promise_middleware___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_redux_promise_middleware__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__reducers_js__ = __webpack_require__("UdY5");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_redux_thunk__ = __webpack_require__("SHgP");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_redux_thunk___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_redux_thunk__);
 
 
+
+
+
+const composeEnhancers = typeof window !== 'undefined' && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || __WEBPACK_IMPORTED_MODULE_0_redux__["compose"];
 
 function configureStore() {
-    const store = Object(__WEBPACK_IMPORTED_MODULE_0_redux__["createStore"])(__WEBPACK_IMPORTED_MODULE_1__reducers_js__["a" /* default */]);
+    const store = Object(__WEBPACK_IMPORTED_MODULE_0_redux__["createStore"])(__WEBPACK_IMPORTED_MODULE_2__reducers_js__["a" /* default */], composeEnhancers(Object(__WEBPACK_IMPORTED_MODULE_0_redux__["applyMiddleware"])(__WEBPACK_IMPORTED_MODULE_3_redux_thunk___default.a, __WEBPACK_IMPORTED_MODULE_1_redux_promise_middleware___default()())));
     return store;
 }
 
@@ -434,6 +477,30 @@ module.exports = require("redux");
 /***/ (function(module, exports) {
 
 module.exports = require("react-dom/server");
+
+/***/ }),
+
+/***/ "nSrI":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (immutable) */ __webpack_exports__["a"] = loadPosts;
+function loadPosts() {
+    return (dispatch, getState) => {
+        const { posts } = getState();
+        if (posts.data != null) {
+            return;
+        }
+        return dispatch(fetchPosts());
+    };
+}
+
+function fetchPosts() {
+    return {
+        type: 'LOAD_POSTS',
+        payload: fetch('http://jsonplaceholder.typicode.com/posts?userId=1').then(d => d.json())
+    };
+}
 
 /***/ }),
 

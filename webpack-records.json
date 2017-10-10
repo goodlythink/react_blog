@@ -282,7 +282,11 @@
       "node_modules/react-redux/es/connect/connect.js": "yyvF",
       "node_modules/core-js/library/modules/es6.string.iterator.js": "zQR9",
       "node_modules/babel-runtime/helpers/possibleConstructorReturn.js": "zwoO",
-      "node_modules/symbol-observable/lib/ponyfill.js": "zzRL"
+      "node_modules/symbol-observable/lib/ponyfill.js": "zzRL",
+      "node_modules/redux-thunk/lib/index.js": "4ufr",
+      "node_modules/redux-promise-middleware/dist/index.js": "EBT9",
+      "node_modules/babel-loader/lib/index.js??ref--0-0!web/actions.js": "nSrI",
+      "node_modules/redux-promise-middleware/dist/isPromise.js": "t/fv"
     },
     "usedIds": {
       "0": 0,
@@ -499,7 +503,11 @@
       "yyvF": "yyvF",
       "zQR9": "zQR9",
       "zwoO": "zwoO",
-      "zzRL": "zzRL"
+      "zzRL": "zzRL",
+      "4ufr": "4ufr",
+      "EBT9": "EBT9",
+      "nSrI": "nSrI",
+      "t/fv": "t/fv"
     }
   },
   "chunks": {

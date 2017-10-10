@@ -1,15 +1,19 @@
 import { createStore, applyMiddleware, compose } from 'redux'
 import promiseMiddleware from 'redux-promise-middleware'
 import reducers from './reducers.js'
+import thunk from 'redux-thunk'
 
-const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
+const composeEnhancers = (
+    typeof window !== 'undefined' &&
+    window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__
+) || compose
 
 export default function configureStore() {
     const store = createStore(
         reducers,
         composeEnhancers(
-            applyMiddleware(promiseMiddleware()),
-        )    
-    ) 
+            applyMiddleware(thunk, promiseMiddleware()),
+        )
+    )
     return store
 }
