@@ -8,7 +8,7 @@ const composeEnhancers = (
     window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__
 ) || compose
 
-export default function configureStore({ preloadState } = {}) {
+export default function configureStore({ preloadState, client } = {}) {
     const store = createStore(
         reducers,
         preloadState,
