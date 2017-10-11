@@ -1,6 +1,6 @@
-import { createStore, applyMiddleware, compose } from 'redux'
+import { createStore, applyMiddleware, compose, combineReducers } from 'redux'
 import promiseMiddleware from 'redux-promise-middleware'
-import reducers from './reducers.js'
+import * as reducers from './reducers.js'
 import thunk from 'redux-thunk'
 
 const composeEnhancers = (
@@ -10,10 +10,13 @@ const composeEnhancers = (
 
 export default function configureStore({ preloadState, client } = {}) {
     const store = createStore(
-        reducers,
+        combineReducers({
+            ...reducers,
+            apollo: client.reducer()
+        }),
         preloadState,
         composeEnhancers(
-            applyMiddleware(thunk, promiseMiddleware()),
+            applyMiddleware(client.middleware(), thunk, promiseMiddleware()),
         )
     )
     return store

@@ -4,10 +4,16 @@ import { match, RouterContext } from 'react-router'
 import routes from '../web/routes'
 import { Provider } from 'react-redux'
 import configureStore from '../web/configureStore'
+import { ApolloClient, ApolloProvider, createNetworkInterface, getDataFromTree } from 'react-apollo'
 
 function matchRoute(req) {
-    const store = configureStore();
-
+    const client = new ApolloClient({
+        networkInterface: createNetworkInterface({
+            uri: 'http://localhost:8000/api/graphql',
+        }),
+        ssrMode: true,
+    })
+    const store = configureStore({ client });
     return new Promise((resolve, reject) => {
         match(
             { routes, location: req.url },
@@ -26,10 +32,12 @@ function matchRoute(req) {
                         .map(c => c.fetchData(store))
                     await Promise.all(prefetches)
                     const element = (
-                        <Provider store={store}>
+                        <ApolloProvider client={client} store={store}>
                             <RouterContext {...renderProps} />
-                        </Provider>
+                        </ApolloProvider>
                     )
+
+                    await getDataFromTree(element)
                     const content = ReactDOMServer.renderToString(element)
                     resolve({
                         content,
